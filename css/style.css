@@ -12,14 +12,24 @@ body {
     }
 .bg-primary {
         --bs-bg-opacity: 1;
-        background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/home\ 3.jpg');
+        background:linear-gradient(rgba(85, 86, 85, 0.51), rgba(36, 62, 11, 0.7)), url('../images/bg1.jpg');
+        min-height: 55vh;
+        b
     }
+.bot {
+    --bs-bg-opacity: 1;
+    background:linear-gradient(rgb(1, 48, 1), rgba(3, 62, 11, 0.7));
 }
 /* Top Bar */
 .top-bar {
     font-size: 0.9rem;
 }
-
+.top {
+    background-color: #2e7d32;
+    color: white;
+    padding: 0.5rem 0;
+    text-align: center;
+}
 /* Navigation */
 .navbar {
     transition: all 0.3s ease;
