@@ -14,7 +14,20 @@ body {
         --bs-bg-opacity: 1;
         background:linear-gradient(rgba(85, 86, 85, 0.51), rgba(36, 62, 11, 0.7)), url('../images/bg1.jpg');
         min-height: 55vh;
-        b
+    
+    }
+    .bgp {
+    background: linear-gradient(rgba(0, 0, 0, 0.064), rgba(125, 194, 137, 0.519)), url('../images/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    min-height: 55vh;
+    }
+    .get{
+        background: linear-gradient(rgba(0, 0, 0, 0.064), rgba(125, 194, 137, 0.519)), url('../images/bg3.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
     }
 .bot {
     --bs-bg-opacity: 1;
