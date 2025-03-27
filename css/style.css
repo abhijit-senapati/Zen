@@ -10,8 +10,10 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     }
-.cus{
-    font-family: 'cute', sans-serif;
+.bg-primary {
+        --bs-bg-opacity: 1;
+        background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/home\ 3.jpg');
+    }
 }
 /* Top Bar */
 .top-bar {
