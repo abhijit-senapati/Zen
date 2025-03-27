@@ -157,7 +157,7 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .hero-section .bgp .get .bot{
+    .hero-section, .bgp, .get, .bot {
         min-height: 60vh;
         text-align: center;
     }
