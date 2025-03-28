@@ -268,15 +268,35 @@ body {
 .bg-light-primary {
     background-color: rgba(0, 102, 204, 0.1);
 }
+.nav-link {
+    position: relative;
+}
 
-.shadow-sm {
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #2e7d32;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+ 
+
+/* .shadow-sm {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .shadow-sm:hover {
-    transform: translateY(-5px);
+    transform: translateY(5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-}
+}  */
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
