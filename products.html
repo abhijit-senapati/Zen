@@ -59,55 +59,75 @@
         </div>
     </section>
 
-    <!-- Products Listing -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Product 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card product-card h-100">
-                        <img src="images/black turmeric.jpg" class="card-img-top" alt="Black Turmeric">
-                        <div class="card-body">
-                            <h3 class="h5">Black Turmeric</h3>
-                            <p><strong>Botanical Name:</strong> Curcuma caesia</p>
-                            <p><strong>Uses:</strong> Medicinal purposes, anti-inflammatory properties</p>
-                            <p><strong>Packaging:</strong> 25kg bags</p>
-                        </div>
-                    </div>
+    <!-- Products List -->
+    <div class="container mt-5">
+        <div class="row" id="productList"></div>
+    </div>
+
+     <!-- Product Detail Modal -->
+     <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
-                <!-- Product 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card product-card h-100">
-                        <img src="images/babchi seeds.jpg" class="card-img-top" alt="Bapchi Seed">
-                        <div class="card-body">
-                            <h3 class="h5">Bapchi Seed</h3>
-                            <p><strong>Botanical Name:</strong> Psoralea corylifolia</p>
-                            <p><strong>Uses:</strong> Skin treatments, traditional medicine</p>
-                            <p><strong>Packaging:</strong> 20kg bags</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card product-card h-100">
-                        <img src="images/aswagandha.png" class="card-img-top" alt="Ashwagandha">
-                        <div class="card-body">
-                            <h3 class="h5">Ashwagandha</h3>
-                            <p><strong>Botanical Name:</strong> Withania somnifera</p>
-                            <p><strong>Uses:</strong> Stress relief, immunity booster</p>
-                            <p><strong>Packaging:</strong> Powder (25kg), Root (50kg)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Continue with all products -->
-                <!-- Nanari, Nux vomica, Jafra Seeds, Gachakaya Seeds, Mushk Dana, Lemongrass Oil, Coleus -->
-
+                <div class="modal-body" id="productModalBody"></div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <script>
+       const products = [
+            { name: "Black Turmeric", image: "black turmeric.jpg", uses: "Ayurvedic medicine, skin care, anti-inflammatory properties", quality: "Lab-tested for purity and authenticity", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Black Turmeric (Curcuma caesia) is known for its medicinal properties, especially in Ayurveda." },
+            { name: "Bapchi Seed", image: "bapchi_seed.jpg", uses: "Traditional medicine for skin disorders and UV therapy", quality: "Lab-tested for purity", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Bapchi Seed is used in Ayurveda and traditional medicine to treat various skin conditions." },
+            { name: "Ashwagandha", image: "ashwagandha.jpg", uses: "Stress relief, energy boosting, immunity enhancement", quality: "Premium grade", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Ashwagandha is a powerful adaptogen that helps reduce stress and anxiety." },
+            { name: "Nanari", image: "nanari.jpg", uses: "Cooling agent, used in herbal drinks", quality: "100% natural", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Nanari is a cooling herb widely used in traditional drinks and tonics." },
+            { name: "Nux Vomica (Kuchla)", image: "nux vomica.jpg", uses: "Traditional medicine applications", quality: "Lab-tested for safety", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Nux Vomica is a potent medicinal plant used to treat digestive disorders and neurological issues." },
+            { name: "Jafra Seeds", image: "Jafra.png", uses: "Used in herbal formulations", quality: "High purity grade", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Jafra Seeds are valued for their medicinal properties and are used in various herbal formulations." },
+            { name: "Gachakaya Seeds", image: "Gachakya.png", uses: "Medicinal applications", quality: "Certified organic", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Gachakaya Seeds are used in traditional medicine for their antibacterial and anti-inflammatory properties." },
+            { name: "Mushk Dana", image: "Mushk.png", uses: "Aromatherapy and traditional medicine", quality: "Premium natural quality", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Mushk Dana is a highly aromatic seed known for its calming effects in aromatherapy." },
+            { name: "Lemongrass Oil", image: "lemongrass.png", uses: "Essential oil for cosmetics, aromatherapy", quality: "100% pure essential oil", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Lemongrass Oil is widely used in skincare, aromatherapy, and medicinal applications." },
+            { name: "Coleus", image: "coleus.jpg", uses: "Medicinal plant with various applications", quality: "Pharmaceutical grade", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Coleus is a medicinal plant known for its benefits in weight management and cardiovascular health." },
+            { name: "Shatavari", image: "Shatavari.png", uses: "Women's health, hormonal balance", quality: "Organic certified", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Shatavari is an Ayurvedic herb known for promoting hormonal balance and reproductive health in women." },
+            { name: "Giloy", image: "Giloy.png", uses: "Immunity booster, anti-inflammatory properties", quality: "High-quality herbal extract", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Giloy is an ancient medicinal herb known for boosting immunity and detoxification." }
+        ];
+        const productList = document.getElementById("productList");
+
+        products.forEach((product, index) => {
+            const productCard = `
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="images/${product.image}" class="card-img-top product-img" alt="${product.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text"><strong>Uses:</strong> ${product.uses}</p>
+                            <p class="card-text"><strong>Quality Control:</strong> ${product.quality}</p>
+                            <p class="card-text"><strong>MOQ:</strong> ${product.moq}</p>
+                            <p class="card-text"><strong>Packaging:</strong> ${product.packaging}</p>
+                            <button class="btn btn-primary" onclick="showProductDetails(${index})">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            productList.innerHTML += productCard;
+        });
+
+        function showProductDetails(index) {
+            const product = products[index];
+            document.getElementById("productModalLabel").innerText = product.name;
+            document.getElementById("productModalBody").innerHTML = `
+                <img src="images/${product.image}" class="img-fluid mb-3 product-img" alt="${product.name}">
+                <p><strong>Uses:</strong> ${product.uses}</p>
+                <p><strong>Quality Control:</strong> ${product.quality}</p>
+                <p><strong>MOQ:</strong> ${product.moq}</p>
+                <p><strong>Packaging:</strong> ${product.packaging}</p>
+                <p><strong>Description:</strong> ${product.description}</p>
+            `;
+            var productModal = new bootstrap.Modal(document.getElementById("productModal"));
+            productModal.show();
+        }
+    </script>
 
     <!-- Footer -->
     <footer class="bot text-white py-5">

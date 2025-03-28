@@ -81,9 +81,22 @@
         </div>
     </section>
 
+    <!-- Header Section -->
+    <div class="header-section">
+        <div class="header-content">
+            <h1>Welcome to Zenvio Global Private Limited</h1>
+            <p>At Zenvio Global Private Limited, we specialize in the export of premium-quality herbal and medicinal
+                products. With over 10 years of experience in the herbal export industry, we are committed to delivering
+                nature’s finest products to global markets. Our company is GMP-certified, ensuring that all products
+                meet international quality and safety standards. Based in Sambalpur, Odisha, we focus on quality,
+                sustainability, and customer satisfaction to provide the best sourcing for businesses worldwide.</p>
+        </div>
+    </div>
+
     <!-- Features Section -->
     <section class="py-5 bg-light">
         <div class="container">
+            <h2 class="text-center mb-4">Why Choose Us?</h2>
             <div class="row g-4">
                 <div class="col-md-4 text-center">
                     <div class="feature-card p-4 rounded-3 h-100">
@@ -112,85 +125,110 @@
                         <p class="mb-0">Direct sourcing from organic farms across India</p>
                     </div>
                 </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-card p-4 rounded-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Premium Quality</h3>
+                        <p class="mb-0">Strict quality control through lab testing, batch tracking, and adherence to
+                            international
+                            export regulations.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="feature-card p-4 rounded-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3>Custom Packaging</h3>
+                        <p class="mb-0">Tailored solutions, including private labeling and bulk orders, to meet client
+                            requirements.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-card p-4 rounded-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-certificate mb-3"></i>
+                        </div>
+                        <h3>Certifications</h3>
+                        <p class="mb-0">Our products comply with GMP, ISO, and FSSAI standards for superior safety and
+                            quality.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Featured Products -->
     <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Our Premium Products</h2>
-                <p class="text-muted">High-quality herbal products for global markets</p>
-            </div>
-            <div class="row g-4">
-                <!-- Product 1 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <div class="product-badge bg-success">In Stock</div>
-                        <img src="images/black turmeric.jpg" class="card-img-top" alt="Black Turmeric">
-                        <div class="card-body">
-                            <h5 class="card-title">Black Turmeric</h5>
-                            <p class="text-muted small">Curcuma caesia</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="fw-bold text-primary">$25/kg</span>
-                                <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Our Premium Export Products</h2>
+            <div class="row" id="productList"></div>
+        </div>
 
-                <!-- Product 2 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <div class="product-badge bg-success">In Stock</div>
-                        <img src="images/aswagandha.png" class="card-img-top" alt="Ashwagandha">
-                        <div class="card-body">
-                            <h5 class="card-title">Ashwagandha</h5>
-                            <p class="text-muted small">Withania somnifera</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="fw-bold text-primary">$18/kg</span>
-                                <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
-                            </div>
-                        </div>
+        <!-- Product Detail Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <div class="product-badge bg-success">In Stock</div>
-                        <img src="images/lemongrass.png" class="card-img-top" alt="Lemongrass Oil">
-                        <div class="card-body">
-                            <h5 class="card-title">Lemongrass Oil</h5>
-                            <p class="text-muted small">Cymbopogon</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="fw-bold text-primary">$35/liter</span>
-                                <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <div class="product-badge bg-warning">Limited Stock</div>
-                        <img src="images/nux vomica.jpg" class="card-img-top" alt="Nux Vomica">
-                        <div class="card-body">
-                            <h5 class="card-title">Nux Vomica</h5>
-                            <p class="text-muted small">Strychnos nux-vomica</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="fw-bold text-primary">$42/kg</span>
-                                <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="modal-body" id="productModalBody"></div>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a href="products.html" class="btn btn-primary px-4">View All Products</a>
-            </div>
+        </div>
+
+        <script>
+            const products = [
+                { name: "Black Turmeric", image: "black turmeric.jpg", uses: "Ayurvedic medicine, skin care, anti-inflammatory properties", quality: "Lab-tested for purity and authenticity", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Black Turmeric (Curcuma caesia) is known for its medicinal properties, especially in Ayurveda. It is used to treat wounds, infections, and pain relief. The rhizomes have a distinct aroma and are rich in curcumin, which is beneficial for health." },
+                { name: "Bapchi Seed", image: "bapchi_seed.jpg", uses: "Traditional medicine for skin disorders and UV therapy", quality: "Lab-tested for purity", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Bapchi Seed (Psoralea corylifolia) is widely used in Ayurvedic treatments for its antifungal and antibacterial properties. It is primarily known for treating vitiligo and other skin conditions by promoting melanin production." },
+                { name: "Ashwagandha", image: "ashwagandha.jpg", uses: "Stress relief, energy boosting, immunity enhancement", quality: "Premium grade", moq: "100kg", packaging: "25kg bags or custom packaging available", description: "Ashwagandha (Withania somnifera) is a powerful adaptogen that helps reduce stress and anxiety. It also improves energy levels, enhances cognitive function, and boosts overall immune health. Regular consumption supports better sleep and hormonal balance." },
+
+            ];
+
+            const productList = document.getElementById("productList");
+
+            products.forEach((product, index) => {
+                const productCard = `
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="images/${product.image}" class="card-img-top product-img" alt="${product.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text"><strong>Uses:</strong> ${product.uses}</p>
+                            <p class="card-text"><strong>Quality Control:</strong> ${product.quality}</p>
+                            <p class="card-text"><strong>MOQ:</strong> ${product.moq}</p>
+                            <p class="card-text"><strong>Packaging:</strong> ${product.packaging}</p>
+                            <button class="btn btn-primary" onclick="showProductDetails(${index})">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+                productList.innerHTML += productCard;
+            });
+
+            function showProductDetails(index) {
+                const product = products[index];
+                document.getElementById("productModalLabel").innerText = product.name;
+                document.getElementById("productModalBody").innerHTML = `
+                <img src="images/${product.image}" class="img-fluid mb-3 product-img" alt="${product.name}">
+                <p><strong>Uses:</strong> ${product.uses}</p>
+                <p><strong>Quality Control:</strong> ${product.quality}</p>
+                <p><strong>MOQ:</strong> ${product.moq}</p>
+                <p><strong>Packaging:</strong> ${product.packaging}</p>
+                <p><strong>Description:</strong> ${product.description}</p>
+            `;
+                var productModal = new bootstrap.Modal(document.getElementById("productModal"));
+                productModal.show();
+            }
+        </script>
+        <div class="text-center mt-5">
+            <a href="products.html" class="btn btn-primary px-4">View All Products</a>
+        </div>
         </div>
     </section>
 
@@ -215,181 +253,222 @@
                         <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> 100+ Satisfied Clients
                             Worldwide</li>
                     </ul>
-                                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">What Our Clients Say</h2>
-                <p class="text-muted">Trusted by herbal product manufacturers worldwide</p>
-            </div>
+    <!-- our vision -->
+    <section class="py-5 bg-light">
+        <section class="container">
+            <h2 class="text-center mb-4">Our Mission & Vision</h2>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card p-4 h-100">
-                        <div class="rating mb-3">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
+                <div class="col-md-4 text-center">
+                    <div class="feature-card p-4 rounded-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-bullseye"></i>
                         </div>
-                        <p class="mb-4">"Zenvio Global has been our reliable supplier of Ashwagandha for 3 years. Their
-                            quality is consistently excellent and documentation is always perfect for international
-                            shipping."</p>
-                        <div class="d-flex align-items-center">
-                            <img src="images/shield.png" alt="Client" class="rounded-circle me-3" width="50">
-                            <div>
-                                <h6 class="mb-0">Michael Johnson</h6>
-                                <small class="text-muted">CEO, HerbHealth USA</small>
+                        <h3>Mission</h3>
+                        <p class="mb-0">To supply 100% natural, chemical-free herbal products with the highest quality
+                            standards through ethical sourcing and scientific testing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-card p-4 rounded-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Vision</h3>
+                        <p class="mb-0">To become a leading global supplier of herbal exports, empowering businesses
+                            with authentic and sustainable products.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-card p-4 rounded-3 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Efficient Logistics</h3>
+                        <p class="mb-0">Strong global supply chain and efficient logistics with end-to-end tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">What Our Clients Say</h2>
+                    <p class="text-muted">Trusted by herbal product manufacturers worldwide</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card p-4 h-100">
+                            <div class="rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-4">"Zenvio Global has been our reliable supplier of Ashwagandha for 3 years.
+                                Their
+                                quality is consistently excellent and documentation is always perfect for international
+                                shipping."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="images/shield.png" alt="Client" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Michael Johnson</h6>
+                                    <small class="text-muted">CEO, HerbHealth USA</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card p-4 h-100">
+                            <div class="rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-4">"Zenvio Global has been our reliable supplier of Ashwagandha for 3 years.
+                                Their
+                                quality is consistently excellent and documentation is always perfect for international
+                                shipping."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="images/shield.png" alt="Client" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Michael Johnson</h6>
+                                    <small class="text-muted">CEO, HerbHealth USA</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card p-4 h-100">
+                            <div class="rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-4">"Zenvio Global has been our reliable supplier of Ashwagandha for 3 years.
+                                Their
+                                quality is consistently excellent and documentation is always perfect for international
+                                shipping."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="images/shield.png" alt="Client" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Michael Johnson</h6>
+                                    <small class="text-muted">CEO, HerbHealth USA</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card p-4 h-100">
-                        <div class="rating mb-3">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                        </div>
-                        <p class="mb-4">"Zenvio Global has been our reliable supplier of Ashwagandha for 3 years. Their
-                            quality is consistently excellent and documentation is always perfect for international
-                            shipping."</p>
-                        <div class="d-flex align-items-center">
-                            <img src="images/shield.png" alt="Client" class="rounded-circle me-3" width="50">
-                            <div>
-                                <h6 class="mb-0">Michael Johnson</h6>
-                                <small class="text-muted">CEO, HerbHealth USA</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card p-4 h-100">
-                        <div class="rating mb-3">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                        </div>
-                        <p class="mb-4">"Zenvio Global has been our reliable supplier of Ashwagandha for 3 years. Their
-                            quality is consistently excellent and documentation is always perfect for international
-                            shipping."</p>
-                        <div class="d-flex align-items-center">
-                            <img src="images/shield.png" alt="Client" class="rounded-circle me-3" width="50">
-                            <div>
-                                <h6 class="mb-0">Michael Johnson</h6>
-                                <small class="text-muted">CEO, HerbHealth USA</small>
-                            </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-4">Ready to Partner With Us?</h2>
+                <p class="lead mb-5">Get premium quality herbal products with complete export documentation</p>
+                <a href="contact-us.html" class="btn btn-light btn-lg px-4 me-2">Request Quote</a>
+                <a href="contact-us.html" class="btn btn-outline-light btn-lg px-4">Contact Sales</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bot text-white py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <img src="images/logo.png" alt="Zenvio Global" height="40" class="mb-3">
+                        <p>Zenvio Global Private Limited - Leading exporters of premium Ayurvedic and organic herbal
+                            products to global markets.</p>
+                        <div class="social-links mt-4">
+                            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-5 bg-primary text-white">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-4">Ready to Partner With Us?</h2>
-            <p class="lead mb-5">Get premium quality herbal products with complete export documentation</p>
-            <a href="contact-us.html" class="btn btn-light btn-lg px-4 me-2">Request Quote</a>
-            <a href="contact-us.html" class="btn btn-outline-light btn-lg px-4">Contact Sales</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bot text-white py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <img src="images/logo.png" alt="Zenvio Global" height="40" class="mb-3">
-                    <p>Zenvio Global Private Limited - Leading exporters of premium Ayurvedic and organic herbal
-                        products to global markets.</p>
-                    <div class="social-links mt-4">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <div class="col-lg-2 col-md-4">
+                        <h5 class="mb-4">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
+                            <li class="mb-2"><a href="who-we-are.html" class="text-white">About Us</a></li>
+                            <li class="mb-2"><a href="products.html" class="text-white">Products</a></li>
+                            <li class="mb-2"><a href="quality.html" class="text-white">Quality</a></li>
+                            <li class="mb-2"><a href="contact-us.html" class="text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <h5 class="mb-4">Our Products</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-white">Black Turmeric</a></li>
+                            <li class="mb-2"><a href="#" class="text-white">Ashwagandha</a></li>
+                            <li class="mb-2"><a href="#" class="text-white">Lemongrass Oil</a></li>
+                            <li class="mb-2"><a href="#" class="text-white">Nux Vomica</a></li>
+                            <li class="mb-2"><a href="products.html" class="text-primary">View All →</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <h5 class="mb-4">Contact Us</h5>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> KHATA NO 615/159, SONEPUR ROAD, NEAR DURGA
+                                MANDIR,
+                                DHANUPAL, SAMBALPUR, ODISHA, 768005</p>
+                            <p class="mb-2"><i class="fas fa-phone-alt me-2"></i> +91 79782 95041</p>
+                            <p class="mb-0"><i class="fas fa-envelope me-2"></i> sales@zenvioglobal.com</p>
+                        </address>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="mb-4">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
-                        <li class="mb-2"><a href="who-we-are.html" class="text-white">About Us</a></li>
-                        <li class="mb-2"><a href="products.html" class="text-white">Products</a></li>
-                        <li class="mb-2"><a href="quality.html" class="text-white">Quality</a></li>
-                        <li class="mb-2"><a href="contact-us.html" class="text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4">
-                    <h5 class="mb-4">Our Products</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white">Black Turmeric</a></li>
-                        <li class="mb-2"><a href="#" class="text-white">Ashwagandha</a></li>
-                        <li class="mb-2"><a href="#" class="text-white">Lemongrass Oil</a></li>
-                        <li class="mb-2"><a href="#" class="text-white">Nux Vomica</a></li>
-                        <li class="mb-2"><a href="products.html" class="text-primary">View All →</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4">
-                    <h5 class="mb-4">Contact Us</h5>
-                    <address>
-                        <p><i class="fas fa-map-marker-alt me-2"></i> KHATA NO 615/159, SONEPUR ROAD, NEAR DURGA MANDIR,
-                            DHANUPAL, SAMBALPUR, ODISHA, 768005</p>
-                        <p class="mb-2"><i class="fas fa-phone-alt me-2"></i> +91 79782 95041</p>
-                        <p class="mb-0"><i class="fas fa-envelope me-2"></i> sales@zenvioglobal.com</p>
-                    </address>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2023 Zenvio Global Private Limited. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white">Terms of Service</a>
+                    </div>
                 </div>
             </div>
-            <hr class="my-4">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2023 Zenvio Global Private Limited. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="text-white me-3">Privacy Policy</a>
-                    <a href="#" class="text-white">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Chat Widget -->
-    <div class="chat-popup" id="chatPopup">
-        <div class="chat-header bg-primary text-white d-flex justify-content-between align-items-center p-3">
-            <h6 class="mb-0">How can we help you?</h6>
-            <button class="btn-close btn-close-white" id="closeChat"></button>
-        </div>
-        <div class="chat-body p-3">
-            <div class="chat-messages mb-3" id="chatMessages">
-                <div class="chat-message bot-message bg-light p-3 rounded mb-2">
-                    <p class="mb-0">Hello! Welcome to Zenvio Global. How can we assist you today?</p>
+        <!-- Chat Widget -->
+        <div class="chat-popup" id="chatPopup">
+            <div class="chat-header bg-primary text-white d-flex justify-content-between align-items-center p-3">
+                <h6 class="mb-0">How can we help you?</h6>
+                <button class="btn-close btn-close-white" id="closeChat"></button>
+            </div>
+            <div class="chat-body p-3">
+                <div class="chat-messages mb-3" id="chatMessages">
+                    <div class="chat-message bot-message bg-light p-3 rounded mb-2">
+                        <p class="mb-0">Hello! Welcome to Zenvio Global. How can we assist you today?</p>
+                    </div>
+                </div>
+                <div class="chat-input d-flex">
+                    <input type="text" id="userMessage" placeholder="Type your message..."
+                        class="form-control rounded-0">
+                    <button id="sendMessage" class="btn btn-primary rounded-0">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
             </div>
-            <div class="chat-input d-flex">
-                <input type="text" id="userMessage" placeholder="Type your message..." class="form-control rounded-0">
-                <button id="sendMessage" class="btn btn-primary rounded-0">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
         </div>
-    </div>
-    <div class="chat-icon" id="chatIcon">
-        <i class="fas fa-comments"></i>
-    </div>
+        <div class="chat-icon" id="chatIcon">
+            <i class="fas fa-comments"></i>
+        </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/scrpt.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/scrpt.js"></script>
 </body>
 
 </html>
